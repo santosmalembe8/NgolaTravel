@@ -1,0 +1,472 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+:root {
+  --cor-principal: #086785;
+  --cor-branca: white;
+  --cor-preta: black;
+  --cor-texto: #4a4a4a;
+  --fundo-corpo: #edefea;
+  --font_titulo: Arial, Helvetica;
+  --cor-preta_segundaria: #242424;
+}
+body {
+  background-color: var(--fundo-corpo);
+}
+
+.cabecalho {
+  /*Css do header**/
+  width: 100%;
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  background-color: var(--cor-principal);
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+
+#nav_bar {
+  /*css da nav*/
+  background-color: var(--cor-principal);
+  display: none;
+  position: fixed;
+  display: none;
+  top: 76px;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  margin: 0;
+  padding: 0;
+}
+#nav_bar .listas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  width: 95%;
+}
+
+#nav_bar .listas .list_item {
+  padding: 10px;
+}
+#nav_bar .listas .list_item:hover {
+  background-color: #046e95;
+  border-radius: 10px;
+}
+#nav_bar .listas .list_item a {
+  color: var(--cor-branca);
+  font-family: var(--font_titulo);
+  font-weight: 900;
+  width: 100%;
+  display: block;
+  height: 100%;
+}
+#nav_bar.mostrar {
+  /*Quando o menu abrir*/
+  display: flex;
+  transition: 0.5s ease-in-out;
+}
+.area_botao button {
+  /*Botão mobile*/
+  background-color: transparent;
+  border: none;
+}
+.area_botao #fechar {
+  display: none;
+}
+
+.area_botao #btn_mobile.mostrar #fechar {
+  display: flex;
+}
+.area_botao #btn_mobile.mostrar #abrir {
+  display: none;
+}
+.conteudo_principal .bem_vindo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  margin: 50px auto;
+  background: rgba(21, 21, 21, 0.9);
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
+    url(img/fundo/fundo1.jpg);
+  background-size: cover;
+  background-position: 43%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.conteudo_principal .bem_vindo .frase_vindas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.conteudo_principal .bem_vindo .frase_vindas h1 {
+  /*Frase boas_vidas*/
+  color: var(--cor-branca);
+  text-align: center;
+  font-size: clamp(40px, 2vw, 50px);
+  font-family: var(--font_titulo);
+}
+.conteudo_principal .bem_vindo .slogan {
+  /*Area com o slogan*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--fundo-corpo);
+}
+.conteudo_principal .bem_vindo .slogan > span {
+  /*slogan*/
+  text-align: center;
+  font-size: clamp(16px, 2vw, 17px);
+}
+.conteudo_principal .bem_vindo .acao {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 10px;
+  gap: 15px;
+}
+.conteudo_principal .bem_vindo .acao button {
+  /*Botao do orçamento*/
+  background-color: var(--cor-preta_segundaria);
+  color: white;
+  border: none;
+  padding: 13px;
+  width: 100%;
+  border-radius: 20px;
+}
+.conteudo_principal .bem_vindo .acao button:hover {
+  background-color: #086785;
+  transition: 0.5 ease-in-out;
+  cursor: pointer;
+}
+.conteudo_principal .bem_vindo .acao button a {
+  color: var(--cor-branca);
+}
+.conteudo_principal .bem_vindo .acao input {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 20px;
+}
+/*Fim da sessão de boas vindas*/
+.servicos {
+  height: auto;
+  margin-top: -50px;
+  background-color: var(--cor-branca);
+}
+
+.servicos .info_servicos h2 {
+  color: black;
+  font-family: var(--font_titulo);
+  padding: 10px;
+  font-size: clamp(25px, 2vw, 30px);
+}
+
+.servicos .info_servicos p {
+  color: #272727;
+  padding: 10px;
+  font-size: clamp(16px, 2vw, 17px);
+}
+.servicos .card_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  gap: 20px;
+}
+.servicos .card_container .card {
+  width: 70%;
+  height: 50%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.servicos .card_container .card .info_card {
+  padding: 10px;
+  width: 100%;
+}
+.servicos .card_container .card .info_card span {
+  color: var(--cor-texto);
+}
+.servicos .card_container .card .imagem_card {
+  width: 100%;
+}
+.servicos .card_container .card .imagem_card img {
+  width: 100%;
+  height: 150px;
+}
+.servicos .card_container .card .acao {
+  padding: 10px;
+}
+.servicos .card_container .card .acao button {
+  padding: 10px 12px 10px 12px;
+  width: 60%;
+  border-radius: 20px;
+  border: 2px solid var(--cor-principal);
+  cursor: pointer;
+}
+.servicos .card_container .card .acao button a{
+  color: var(--cor-preta);
+}
+.servicos .info_servicos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px;
+}
+
+
+.provincias {
+  margin-top: 20px;
+}
+.provincias .titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  width: 99%;
+}
+.provincias .titulo h2 {
+  font-size: clamp(25px, 2vw, 30px);
+  font-family: var(--font_titulo);
+  text-align: center;
+}
+
+.provincias .frase_curta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  color: var(--cor-texto);
+}
+.provincias .frase_curta span {
+  text-align: center;
+}
+
+.provincias .container_img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  width: 95%;
+  height: auto;
+  gap: 20px;
+  padding: 5px;
+}
+
+.provincias .container_img .luanda {
+  background: rgba(21, 21, 21, 0.9);
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
+    url(img/provincias/luanda.jpg);
+  background-size: cover;
+  background-position: 43%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: var(--font_titulo);
+  font-size: clamp(18px, 2vw, 20x);
+  font-weight: 900;
+  border-radius: 50px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.provincias .container_img .huambo {
+  background: rgba(21, 21, 21, 0.9);
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
+    url(img/provincias/huambo.jpg);
+  background-size: cover;
+  background-position: 43%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: var(--font_titulo);
+  font-size: clamp(18px, 2vw, 20x);
+  font-weight: 900;
+  border-radius: 50px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.provincias .container_img .huila {
+  background: rgba(21, 21, 21, 0.9);
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
+    url(img/provincias/huila.jpg);
+  background-size: cover;
+  background-position: 43%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: var(--font_titulo);
+  font-size: clamp(18px, 2vw, 20x);
+  font-weight: 900;
+  border-radius: 50px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.provincias .container_img .benguela {
+  background: rgba(21, 21, 21, 0.9);
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
+    url(img/provincias/benguela.jpg);
+  background-size: cover;
+  background-position: 43%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: var(--font_titulo);
+  font-size: clamp(18px, 2vw, 20x);
+  font-weight: 900;
+  border-radius: 50px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+}
+.provincias .container_img .namibe {
+  background: rgba(21, 21, 21, 0.9);
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
+    url(img/provincias/namibe.jpg);
+  background-size: cover;
+  background-position: 43%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: var(--font_titulo);
+  font-size: clamp(18px, 2vw, 20x);
+  font-weight: 900;
+  border-radius: 50px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.provincias .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+.provincias .link a {
+  color: var(--cor-preta_segundaria);
+  text-decoration: underline;
+}
+
+.ngolaIa {
+  background-color: var(--cor-principal);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12 px;
+  text-align: center;
+  height: 30vh;
+}
+.ngolaIa h2 {
+  color: var(--cor-branca);
+  padding: 10px;
+  font-family: var(--font_titulo);
+}
+.ngolaIa span {
+  color: #fff;
+  padding: 10px;
+  font-size: clamp(15px, 2vw, 16px);
+}
+.ngolaIa button {
+  padding: 10px 12px 10px 12px;
+  margin-top: 15px;
+  border: 2px solid white;
+  border-radius: 20px;
+  background-color: transparent;
+  cursor: pointer;
+  width: 60%;
+}
+
+.ngolaIa button a {
+  color: var(--cor-branca);
+}
+#contactos .cabeca_contactos {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+#contactos .cabeca_contactos h2 {
+  padding: 10px;
+  font-family: var(--font_titulo);
+}
+
+#contactos .dados {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+#contactos .dados input,
+textarea {
+  width: 80%;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+}
+#contactos .enviar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+}
+#contactos .enviar button {
+  width: 60%;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+  background-color: var(--cor-principal);
+  color: var(--cor-branca);
+}
+
+.provincias .container_img img {
+  width: 100%;
+}
