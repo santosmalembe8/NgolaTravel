@@ -408,6 +408,9 @@ body {
   padding: 10px;
   font-family: var(--font_titulo);
 }
+.ngolaIa .info{
+  width: 90%;
+}
 .ngolaIa .info span {
   color: #fff;
   padding: 10px;
