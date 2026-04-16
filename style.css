@@ -137,6 +137,7 @@ body {
   margin-top: 20px;
   padding: 10px;
   gap: 15px;
+  width: 50%;
 }
 .conteudo_principal .bem_vindo .acao button {
   /*Botao do orçamento*/
