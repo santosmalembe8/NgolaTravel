@@ -412,7 +412,6 @@ body {
   color: #fff;
   padding: 10px;
   font-size: clamp(15px, 2vw, 16px);
-  width: 80%;
 }
 .ngolaIa button {
   padding: 10px 12px 10px 12px;
