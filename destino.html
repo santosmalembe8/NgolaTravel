@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NgolaTravel</title>
+    <link rel="stylesheet" href="destino.css" />
+  </head>
+  <body>
+    <header class="cabecalho">
+      <!--Incio do cabecalho-->
+
+      <div class="logotipo">
+        <img src="" alt="logotipo" />
+      </div>
+
+      <nav id="nav_bar">
+        <ul class="listas">
+          <li class="list_item"><a href="index.html">Página Incial</a></li>
+          <li class="list_item"><a href="#">Reservas</a></li>
+          <li class="list_item"><a href="#">Taxa de Câmbio</a></li>
+          <li class="list_item"><a href="#contactos">Contactos</a></li>
+          <li class="list_item"><a href="#">Sobre Nós</a></li>
+          <li class="list_item"><a href="#">Login</a></li>
+        </ul>
+      </nav>
+
+      <div class="area_botao">
+        <!--Area do botao mobile-->
+        <button id="btn_mobile">
+          <img id="abrir" src="img/icone/menu.png" alt="menu_mobile" />
+          <img id="fechar" src="img/icone/fechar.png" alt="fechar" />
+        </button>
+      </div>
+    </header>
+    <!--Fim do cabelho-->
+
+    <main class="conteudo_principal">
+      <section class="cabeca_destino">
+            <h2>Praia da Baia</h2>
+            <div class="media">
+                <div class="valor"><span class="valor">5 000Kz</span></div>
+                <div class="palavra"><span>em média</span></div>
+            </div>
+
+            <div class="cabeca_info">
+                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae eligendi</span>
+            </div>
+
+        <div class="navegacao">
+            <ul>
+                <li id="hotel" onclick="cor1()"><button>Hotéis</button></li>
+                <li id="restaurante" onclick="cor2()"><button>Restaurantes</button></li>
+            </ul>
+        </div>
+      </section>
+
+      <section class="card_container">
+        <div class="card">
+            <div class="card_cabeca">
+                    <h2>SantosLuxo</h2>
+                <div class="classificacao">
+                    <img src="" alt="estrelas">
+                    <span>Avaliações</span>
+                </div>
+                <div class="imagem_card">
+                    <img src="img/provincias/huila.jpg" alt="hotel">
+                </div>
+
+                <div class="acao">
+                    <span><strong>2 000Kz</strong>/noite</span>
+                    <button>Reservar</button>
+                </div>
+
+            </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="index.js"></script>
+    <script src="animacao_botao.js"></script>
+  </body>
+</html>

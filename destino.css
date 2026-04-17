@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+:root {
+  --cor-principal: #086785;
+  --cor-branca: white;
+  --cor-preta: black;
+  --cor-texto: #4a4a4a;
+  --fundo-corpo: #edefea;
+  --font_titulo: Arial, Helvetica;
+  --cor-preta_segundaria: #242424;
+}
+body {
+  background-color: var(--fundo-corpo);
+}
+
+.cabecalho {
+  /*Css do header**/
+  width: 100%;
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  background-color: var(--cor-principal);
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+
+#nav_bar {
+  /*css da nav*/
+  background-color: var(--cor-principal);
+  display: none;
+  position: fixed;
+  display: none;
+  top: 75px;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  margin: 0;
+  padding: 0;
+}
+#nav_bar .listas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  width: 95%;
+}
+
+#nav_bar .listas .list_item {
+  padding: 10px;
+}
+#nav_bar .listas .list_item:hover {
+  background-color: #046e95;
+  border-radius: 10px;
+}
+#nav_bar .listas .list_item a {
+  color: var(--cor-branca);
+  font-family: var(--font_titulo);
+  font-weight: 900;
+  width: 100%;
+  display: block;
+  height: 100%;
+}
+#nav_bar.mostrar {
+  /*Quando o menu abrir*/
+  display: flex;
+  transition: 0.5s ease-in-out;
+}
+.area_botao button {
+  /*Botão mobile*/
+  background-color: transparent;
+  border: none;
+}
+.area_botao #fechar {
+  display: none;
+}
+
+.area_botao #btn_mobile.mostrar #fechar {
+  display: flex;
+}
+.area_botao #btn_mobile.mostrar #abrir {
+  display: none;
+}
+
+.conteudo_principal {
+  margin: 110px auto;
+}
+.conteudo_principal .cabeca_destino {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.conteudo_principal .cabeca_destino h2 {
+  font-family: var(--font_titulo);
+  padding: 5px;
+}
+.conteudo_principal .cabeca_destino .media {
+  border: 1px solid #ccc;
+  margin: 10px auto;
+  border-radius: 10px;
+  display: flex;
+}
+.conteudo_principal .cabeca_destino .media .valor {
+  background-color: var(--cor-principal);
+  padding: 10px;
+  color: white;
+  border-radius: 20px;
+  height: 100%;
+}
+.conteudo_principal .cabeca_destino .media .palavra {
+  padding: 10px;
+  color: var(--cor-texto);
+}
+.cabeca_info {
+  text-align: center;
+}
+.navegacao {
+  display: flex;
+  padding: 10px;
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+}
+.navegacao ul {
+  display: flex;
+  gap: 5px;
+  border-radius: 20px;
+  border: 2px solid #ccc;
+}
+.navegacao ul li {
+  border-radius: 20px;
+  cursor: pointer;
+  display: block;
+  height: 100%;
+  width: 100%;
+  padding: 10px 30px 10px 30px;
+}
+
+.navegacao ul .hotel button {
+  color: white;
+  font-family: var(--font_titulo);
+}
+.navegacao ul .restaurante {
+  color: var(--cor-preta);
+}
+
+.navegacao ul li button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.card_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card_container .card {
+  background-color: var(--cor-branca);
+  width: 90%;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.card_container .card .acao {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-self: center;
+  padding: 7px;
+  width: 98%;
+  margin-left: 2px;
+}
+.card_container .card .acao strong {
+  font-size: clamp(17px, 2vw, 20px);
+}
+.card_container .card .acao button {
+  padding: 10px 15px 10px 15px;
+  width: 40%;
+  background-color: var(--cor-principal);
+  border: none;
+  border-radius: 20px;
+  color: var(--cor-branca);
+  cursor: pointer;
+}
+
+.card_container .card .imagem_card {
+  width: 95%;
+  display: flex;
+  align-self: center;
+}
+.card_container .card .imagem_card img {
+  width: 100%;
+  height: 150px;
+  border-radius: 15px;
+}
+.card_container .card .card_cabeca {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

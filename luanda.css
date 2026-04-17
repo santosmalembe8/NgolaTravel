@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+:root {
+  --cor-principal: #086785;
+  --cor-branca: white;
+  --cor-preta: black;
+  --cor-texto: #4a4a4a;
+  --fundo-corpo: #edefea;
+  --font_titulo: Arial, Helvetica;
+  --cor-preta_segundaria: #242424;
+}
+body {
+  background-color: var(--fundo-corpo);
+}
+
+.cabecalho {
+  /*Css do header**/
+  width: 100%;
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  background-color: var(--cor-principal);
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+}
+
+#nav_bar {
+  /*css da nav*/
+  background-color: var(--cor-principal);
+  display: none;
+  position: fixed;
+  display: none;
+  top: 75px;
+  bottom: 0;
+  right: 0;
+  width: 60%;
+  margin: 0;
+  padding: 0;
+}
+#nav_bar .listas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  width: 95%;
+}
+
+#nav_bar .listas .list_item {
+  padding: 10px;
+}
+#nav_bar .listas .list_item:hover {
+  background-color: #046e95;
+  border-radius: 10px;
+}
+#nav_bar .listas .list_item a {
+  color: var(--cor-branca);
+  font-family: var(--font_titulo);
+  font-weight: 900;
+  width: 100%;
+  display: block;
+  height: 100%;
+}
+#nav_bar.mostrar {
+  /*Quando o menu abrir*/
+  display: flex;
+  transition: 0.5s ease-in-out;
+}
+.area_botao button {
+  /*Botão mobile*/
+  background-color: transparent;
+  border: none;
+}
+.area_botao #fechar {
+  display: none;
+}
+
+.area_botao #btn_mobile.mostrar #fechar {
+  display: flex;
+}
+.area_botao #btn_mobile.mostrar #abrir {
+  display: none;
+}
+
+.conteudo_principal {
+  margin: 76px auto;
+}
+
+.conteudo_principal .boas_vindas{
+   background: rgba(21, 21, 21, 0.9);
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+    url(img/provincias/luanda.jpg);
+  background-size: cover;
+  background-position: 43%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-family: var(--font_titulo);
+  font-size: clamp(18px, 2vw, 20x);
+  font-weight: 900;
+
+}

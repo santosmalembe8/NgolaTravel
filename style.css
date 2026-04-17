@@ -127,7 +127,7 @@ body {
 .conteudo_principal .bem_vindo .slogan > span {
   /*slogan*/
   text-align: center;
-  font-size: clamp(16px, 2vw, 17px);
+  font-size: clamp(15px, 2vw, 16px);
 }
 .conteudo_principal .bem_vindo .acao {
   display: flex;
@@ -166,7 +166,7 @@ body {
 .servicos {
   height: auto;
   margin-top: -50px;
-  background-color: var(--cor-branca);
+  background-color:#F0F0F4;
 }
 
 .servicos .info_servicos h2 {
@@ -190,31 +190,44 @@ body {
   gap: 20px;
 }
 .servicos .card_container .card {
-  width: 70%;
+  width: auto;
   height: 50%;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  display: flex;
+  background-color: var(--cor-branca);
+  border-radius: 10px;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
 }
 .servicos .card_container .card .info_card {
   padding: 10px;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.servicos .card_container .card .info_card  h2{
+  padding: 1px;
+  font-family: var(--font_titulo);
 }
 .servicos .card_container .card .info_card span {
   color: var(--cor-texto);
 }
 .servicos .card_container .card .imagem_card {
   width: 100%;
+  margin: 20px;
 }
 .servicos .card_container .card .imagem_card img {
-  width: 100%;
+  width: 150px;
   height: 150px;
+  border-radius: 10px;
 }
-.servicos .card_container .card .acao {
+.servicos .card_container .card .info_card .acao {
   padding: 10px;
+  display: flex;
 }
-.servicos .card_container .card .acao button {
+.servicos .card_container .card .info_card .acao button {
   padding: 10px 12px 10px 12px;
-  width: 60%;
+  width: 100%;
   border-radius: 20px;
   border: 2px solid var(--cor-principal);
   cursor: pointer;
@@ -230,7 +243,6 @@ body {
   text-align: center;
   padding: 5px;
 }
-
 
 .provincias {
   margin-top: 20px;
@@ -401,7 +413,7 @@ body {
   align-items: center;
   padding: 12 px;
   text-align: center;
-  height: 30vh;
+  height: 40vh;
 }
 .ngolaIa h2 {
   color: var(--cor-branca);
@@ -409,12 +421,18 @@ body {
   font-family: var(--font_titulo);
 }
 .ngolaIa .info{
+  display: flex;
+  flex-direction: column;
   width: 90%;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
 }
 .ngolaIa .info span {
   color: #fff;
   padding: 10px;
   font-size: clamp(15px, 2vw, 16px);
+  text-align: center;
 }
 .ngolaIa button {
   padding: 10px 12px 10px 12px;
@@ -439,7 +457,10 @@ body {
   padding: 10px;
   font-family: var(--font_titulo);
 }
-
+#contactos .cabeca_contactos p{
+  font-size: clamp(14px,2vw,15px);
+  color: var(--cor-texto);
+}
 #contactos .dados {
   display: flex;
   flex-direction: column;
