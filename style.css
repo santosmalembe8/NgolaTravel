@@ -203,7 +203,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  margin-bottom: 35px;
 }
 .servicos .card_container .card .info_card  h2{
   padding: 1px;
@@ -224,6 +224,8 @@ body {
 .servicos .card_container .card .info_card .acao {
   padding: 10px;
   display: flex;
+  position: relative;
+
 }
 .servicos .card_container .card .info_card .acao button {
   padding: 10px 12px 10px 12px;
@@ -231,6 +233,8 @@ body {
   border-radius: 20px;
   border: 2px solid var(--cor-principal);
   cursor: pointer;
+  position: absolute;
+  left:0;
 }
 .servicos .card_container .card .acao button a{
   color: var(--cor-preta);
@@ -411,7 +415,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 12 px;
+  padding: 12px;
   text-align: center;
   height: 40vh;
 }
@@ -427,6 +431,7 @@ body {
   justify-content: center;
   align-items: center;
   justify-self: center;
+  align-self: center;
 }
 .ngolaIa .info span {
   color: #fff;
