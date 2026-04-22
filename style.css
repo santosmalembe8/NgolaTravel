@@ -7,7 +7,7 @@
   scroll-behavior: smooth;
 }
 :root {
-  --cor-principal: #086785;
+  --cor-principal: rgba(2, 112, 131, 0.977);
   --cor-branca: white;
   --cor-preta: black;
   --cor-texto: #4a4a4a;
