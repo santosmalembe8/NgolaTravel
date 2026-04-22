@@ -155,6 +155,7 @@ body {
   font-size: clamp(40px, 2vw, 50px);
   font-family: var(--font_titulo);
   line-height: 1.2;
+  width: 300px;
 }
 .conteudo_principal .bem_vindo .slogan {
   /*Area com o slogan*/
