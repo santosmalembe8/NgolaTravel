@@ -72,7 +72,7 @@ body {
   backdrop-filter: blur(20px);
   transition: 0.4s ease-in-out;
   z-index: 10000;
-  height: 39vh;
+  height: 36vh;
 }
 
 /* QUANDO ABRIR */
@@ -154,6 +154,7 @@ body {
   text-align: center;
   font-size: clamp(40px, 2vw, 50px);
   font-family: var(--font_titulo);
+  line-height: 1.2;
 }
 .conteudo_principal .bem_vindo .slogan {
   /*Area com o slogan*/
@@ -203,7 +204,7 @@ body {
 /*Fim da sessão de boas vindas*/
 
 .provincias {
-  margin-top: 20px;
+  margin-top: -25px;
 }
 .provincias .titulo {
   display: flex;
