@@ -110,6 +110,7 @@ body {
   height: 100%;
   border-radius: 8px;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 /* HOVER MODERNO */
